@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green_dr">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineH"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_percent="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/s2nd_layer_background"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="81dp"
+        android:background="@drawable/rounded_wh"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <View
+        android:id="@+id/s3rd_layer_background"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginTop="153dp"
+        android:background="@drawable/rounded_br"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="220dp"
+        android:layout_marginTop="40dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/al_aqsa"
+        app:layout_constraintBottom_toTopOf="@id/s3rd_layer_background"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:columnCount="2"
+        app:layout_constraintEnd_toEndOf="@id/s3rd_layer_background"
+        app:layout_constraintStart_toStartOf="@id/s3rd_layer_background"
+        app:layout_constraintTop_toTopOf="@id/s3rd_layer_background">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/sabah_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/sun1"
+                android:translationZ="10dp"
+                app:layout_constraintLeft_toLeftOf="@id/sabah"
+                app:layout_constraintRight_toRightOf="@id/sabah"
+                app:layout_constraintTop_toTopOf="@id/sabah" />
+
+            <Button
+                android:id="@+id/sabah"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/green_li"
+                android:minWidth="145dp"
+                android:onClick="sabahClicked"
+                android:paddingHorizontal="30dp"
+                android:paddingTop="60dp"
+                android:text="أذكار الصباح"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="@id/sabah_layout"
+                app:layout_constraintLeft_toLeftOf="@id/sabah_layout"
+                app:layout_constraintRight_toRightOf="@id/sabah_layout"
+                app:layout_constraintTop_toTopOf="@id/sabah_layout" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/masaa_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="12dp"
+                android:src="@drawable/moon"
+                android:translationZ="10dp"
+                app:layout_constraintLeft_toLeftOf="@id/masaa"
+                app:layout_constraintRight_toRightOf="@id/masaa"
+                app:layout_constraintTop_toTopOf="@id/masaa" />
+
+            <Button
+                android:id="@+id/masaa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/green_li"
+                android:minWidth="145dp"
+                android:onClick="masaaClicked"
+                android:paddingHorizontal="30dp"
+                android:paddingTop="60dp"
+                android:text="أذكار المساء"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="@id/masaa_layout"
+                app:layout_constraintLeft_toLeftOf="@id/masaa_layout"
+                app:layout_constraintRight_toRightOf="@id/masaa_layout"
+                app:layout_constraintTop_toTopOf="@id/masaa_layout" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/salaah_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="12dp"
+                android:src="@drawable/salah"
+                android:translationZ="10dp"
+                app:layout_constraintLeft_toLeftOf="@id/salaah"
+                app:layout_constraintRight_toRightOf="@id/salaah"
+                app:layout_constraintTop_toTopOf="@id/salaah" />
+
+            <Button
+                android:id="@+id/salaah"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/green_li"
+                android:minWidth="145dp"
+                android:paddingHorizontal="17dp"
+                android:paddingTop="60dp"
+                android:text="أذكار بعد الصلاة"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="@id/salaah_layout"
+                app:layout_constraintLeft_toLeftOf="@id/salaah_layout"
+                app:layout_constraintRight_toRightOf="@id/salaah_layout"
+                app:layout_constraintTop_toTopOf="@id/salaah_layout" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/tasbeeh_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="2dp"
+                android:src="@drawable/tasbih"
+                android:translationZ="10dp"
+                app:layout_constraintLeft_toLeftOf="@id/tasbeeh"
+                app:layout_constraintRight_toRightOf="@id/tasbeeh"
+                app:layout_constraintTop_toTopOf="@id/tasbeeh" />
+
+            <Button
+                android:id="@+id/tasbeeh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/green_li"
+                android:minWidth="145dp"
+                android:paddingHorizontal="17dp"
+                android:paddingTop="60dp"
+                android:text="التسبيح"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="@id/tasbeeh_layout"
+                app:layout_constraintLeft_toLeftOf="@id/tasbeeh_layout"
+                app:layout_constraintRight_toRightOf="@id/tasbeeh_layout"
+                app:layout_constraintTop_toTopOf="@id/tasbeeh_layout" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
