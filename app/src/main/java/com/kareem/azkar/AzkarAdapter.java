@@ -39,45 +39,27 @@ public class AzkarAdapter extends RecyclerView.Adapter<AzkarAdapter.azkarVH> {
     public void onBindViewHolder(@NonNull azkarVH holder, int position) {
         int textId = azkar.get(position).getTextId();
         holder.textView.setText( this.context.getResources().getString(textId) );
-
         holder.textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.e("onClick", "clicked");
-
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        int currentCount = azkar.get(position).getCount();
-                        Log.e("wait", "yes");
-                        Log.e("wait", "count= "+ currentCount);
-                        if (currentCount > 1 ){
-                            azkar.get(position).setCount(currentCount - 1);
-
-                            Snackbar snackbar = Snackbar.make(view,"يتبقي " + (currentCount - 1),Snackbar.LENGTH_LONG);
-                            View snackbarView =  snackbar.getView();
-                            snackbarView.findViewById(com.google.android.material.R.id.snackbar_text).setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
-                            FrameLayout.LayoutParams params = ( (FrameLayout.LayoutParams) snackbarView.getLayoutParams() );
-                            params.gravity = Gravity.TOP;
-                            snackbarView.setLayoutParams(params);
-
-
-                            snackbar.show();
-                            Toast.makeText(context, "يتبقي " + (currentCount - 1), Toast.LENGTH_LONG).show();
-                        }else {
-                            TextView txt = (TextView) view;
-                            txt.setVisibility(View.GONE);
-
-                            Snackbar snackbar = Snackbar.make(view," إنتهيت ",Snackbar.LENGTH_LONG);
-                            snackbar.getView().findViewById(com.google.android.material.R.id.snackbar_text).setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
-                            snackbar.show();
-                            Toast.makeText(context, " إنتهيت ", Toast.LENGTH_LONG).show();
-                        }
-                    }
-                }, 600);
+                Snackbar snackbar = initCustomSnackbar(view);
+                int currentCount = azkar.get(position).getCount();
+                Log.e("onClick", "count= "+ currentCount);
+                if (currentCount > 1 ){
+                    azkar.get(position).setCount(currentCount - 1);
+                    snackbar.setText("يتبقي " + (currentCount - 1));
+                }else {
+                    view.setClickable(false);
+                    new Handler().postDelayed( () -> {
+                        Log.e("Wait", "remove: "+position );
+                        azkar.remove(position);
+                        notifyDataSetChanged();
+                    } ,300);
+                    snackbar.setText(" إنتهيت ");
+                }
+                snackbar.show();
             }
         });
-
     }
 
     @Override
@@ -85,11 +67,18 @@ public class AzkarAdapter extends RecyclerView.Adapter<AzkarAdapter.azkarVH> {
         return azkar.size();
     }
 
-    class azkarVH extends RecyclerView.ViewHolder{
+    private Snackbar initCustomSnackbar(View view){
+        Snackbar snackbar = Snackbar.make(view,"",Snackbar.LENGTH_SHORT);
+        View snackbarView =  snackbar.getView();
+        snackbarView.findViewById(com.google.android.material.R.id.snackbar_text).setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+        FrameLayout.LayoutParams params = ( (FrameLayout.LayoutParams) snackbarView.getLayoutParams() );
+        params.gravity = Gravity.TOP;
+        snackbarView.setLayoutParams(params);
+        return snackbar;
+    }
 
+    static class azkarVH extends RecyclerView.ViewHolder{
         TextView textView;
-//        Button textView;
-
         public azkarVH(@NonNull View itemView) {
             super(itemView);
             textView = itemView.findViewById(R.id.tv_item);
