@@ -5,21 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-<!--    android:textColor="@color/text_hover_effect"-->
-<!--        android:background="?android:attr/selectableItemBackground"-->
-<!--    android:onClick="counter"-->
-
     <TextView
         android:id="@+id/tv_item"
         style="@style/MyTextViewStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:focusable="true"
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text=" Kareem Wael Kareem Wael Kareem Wael Kareem Wael Kareem Wael Kareem WaelKareem WaelKareem WaelKareem WaelKareem WaelKareem Wael" />
+        tools:text=" Kareem Wael " />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
