@@ -10,4 +10,5 @@
     <color name="green_dark">#FF4F7C79</color>
     <color name="green_light">#FF689592</color>
     <color name="beige">#d6cbae</color>
+    <color name="icon_background">#FFFFFF</color>
 </resources>
