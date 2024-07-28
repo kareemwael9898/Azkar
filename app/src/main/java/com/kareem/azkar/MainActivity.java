@@ -3,6 +3,7 @@ package com.kareem.azkar;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,15 +15,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void sabahClicked(View view) {
+    public void eveningClicked(View view){
         Intent intent = new Intent(MainActivity.this, AzkarActivity.class);
-        intent.putExtra("type", "sabah");
+        intent.putExtra("type", "evening");
         startActivity(intent);
     }
 
-    public void masaaClicked(View view) {
+    public void morningClicked(View view){
         Intent intent = new Intent(MainActivity.this, AzkarActivity.class);
-        intent.putExtra("type", "masaa");
+        intent.putExtra("type", "morning");
         startActivity(intent);
     }
 
@@ -34,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void tasbeehClicked(View view) {
         Intent intent = new Intent(MainActivity.this, TasbeehActivity.class);
-        intent.putExtra("type", "tasbeeh");
         startActivity(intent);
     }
 }

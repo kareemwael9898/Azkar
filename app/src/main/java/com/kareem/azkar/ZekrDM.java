@@ -1,7 +1,6 @@
 package com.kareem.azkar;
 
 import android.util.Log;
-import android.widget.Switch;
 
 import java.util.Arrays;
 import java.util.List;
@@ -29,7 +28,7 @@ public class ZekrDM {
 
     static public List<ZekrDM> getData(String type) {
         switch (type) {
-            case "masaa":
+            case "evening":
                 return Arrays.asList(
                         new ZekrDM(R.string.aya1, 1),
                         new ZekrDM(R.string.aya2, 3),
@@ -54,7 +53,7 @@ public class ZekrDM {
                         new ZekrDM(R.string.doaa16m, 3),
                         new ZekrDM(R.string.doaa18, 3),
                         new ZekrDM(R.string.doaa19, 10));
-            case "sabah":
+            case "morning":
                     return Arrays.asList(
                             new ZekrDM(R.string.aya1, 1),
                             new ZekrDM(R.string.aya2, 3),

@@ -62,10 +62,11 @@
         app:layout_constraintTop_toTopOf="@id/s3rd_layer_background">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/sabah_layout"
+            android:id="@+id/morning_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
+            android:layout_gravity="center"
             android:orientation="vertical">
 
             <ImageView
@@ -74,30 +75,31 @@
                 android:layout_marginTop="8dp"
                 android:src="@drawable/sun"
                 android:translationZ="10dp"
-                app:layout_constraintLeft_toLeftOf="@id/sabah"
-                app:layout_constraintRight_toRightOf="@id/sabah"
-                app:layout_constraintTop_toTopOf="@id/sabah" />
+                app:layout_constraintLeft_toLeftOf="@id/morning_btn"
+                app:layout_constraintRight_toRightOf="@id/morning_btn"
+                app:layout_constraintTop_toTopOf="@id/morning_btn" />
 
             <Button
-                android:id="@+id/sabah"
+                android:id="@+id/morning_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/green_light"
                 android:minWidth="150dp"
-                android:onClick="sabahClicked"
+                android:onClick="morningClicked"
                 android:paddingTop="60dp"
-                android:text="@string/azkar_sabah"
+                android:text="@string/morning_azkar"
                 android:textSize="20sp"
-                app:layout_constraintBottom_toBottomOf="@id/sabah_layout"
-                app:layout_constraintLeft_toLeftOf="@id/sabah_layout"
-                app:layout_constraintRight_toRightOf="@id/sabah_layout"
-                app:layout_constraintTop_toTopOf="@id/sabah_layout" />
+                app:layout_constraintBottom_toBottomOf="@id/morning_layout"
+                app:layout_constraintLeft_toLeftOf="@id/morning_layout"
+                app:layout_constraintRight_toRightOf="@id/morning_layout"
+                app:layout_constraintTop_toTopOf="@id/morning_layout" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/masaa_layout"
+            android:id="@+id/evening_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_columnWeight="1"
             android:orientation="vertical">
 
@@ -107,57 +109,58 @@
                 android:layout_marginTop="12dp"
                 android:src="@drawable/moon"
                 android:translationZ="10dp"
-                app:layout_constraintLeft_toLeftOf="@id/masaa"
-                app:layout_constraintRight_toRightOf="@id/masaa"
-                app:layout_constraintTop_toTopOf="@id/masaa" />
+                app:layout_constraintLeft_toLeftOf="@id/evening_btn"
+                app:layout_constraintRight_toRightOf="@id/evening_btn"
+                app:layout_constraintTop_toTopOf="@id/evening_btn" />
 
             <Button
-                android:id="@+id/masaa"
+                android:id="@+id/evening_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/green_light"
                 android:minWidth="150dp"
-                android:onClick="masaaClicked"
+                android:onClick="eveningClicked"
                 android:paddingTop="66dp"
-                android:text="@string/azkar_masaa"
+                android:text="@string/evening_azkar"
                 android:textSize="20sp"
-                app:layout_constraintBottom_toBottomOf="@id/masaa_layout"
-                app:layout_constraintLeft_toLeftOf="@id/masaa_layout"
-                app:layout_constraintRight_toRightOf="@id/masaa_layout"
-                app:layout_constraintTop_toTopOf="@id/masaa_layout" />
+                app:layout_constraintBottom_toBottomOf="@id/evening_layout"
+                app:layout_constraintLeft_toLeftOf="@id/evening_layout"
+                app:layout_constraintRight_toRightOf="@id/evening_layout"
+                app:layout_constraintTop_toTopOf="@id/evening_layout" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/salaah_layout"
+            android:id="@+id/pray_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
+            android:layout_gravity="center"
             android:orientation="vertical">
 
             <ImageView
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="12dp"
-                android:src="@drawable/salah"
+                android:src="@drawable/prayer"
                 android:translationZ="10dp"
-                app:layout_constraintLeft_toLeftOf="@id/salaah"
-                app:layout_constraintRight_toRightOf="@id/salaah"
-                app:layout_constraintTop_toTopOf="@id/salaah" />
+                app:layout_constraintLeft_toLeftOf="@id/pray_btn"
+                app:layout_constraintRight_toRightOf="@id/pray_btn"
+                app:layout_constraintTop_toTopOf="@id/pray_btn" />
 
             <Button
-                android:id="@+id/salaah"
+                android:id="@+id/pray_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/green_light"
                 android:minWidth="150dp"
                 android:onClick="prayClicked"
                 android:paddingTop="60dp"
-                android:text="@string/azkar_salah"
+                android:text="@string/pray_azkar"
                 android:textSize="20sp"
-                app:layout_constraintBottom_toBottomOf="@id/salaah_layout"
-                app:layout_constraintLeft_toLeftOf="@id/salaah_layout"
-                app:layout_constraintRight_toRightOf="@id/salaah_layout"
-                app:layout_constraintTop_toTopOf="@id/salaah_layout" />
+                app:layout_constraintBottom_toBottomOf="@id/pray_layout"
+                app:layout_constraintLeft_toLeftOf="@id/pray_layout"
+                app:layout_constraintRight_toRightOf="@id/pray_layout"
+                app:layout_constraintTop_toTopOf="@id/pray_layout" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -165,6 +168,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
+            android:layout_gravity="center"
             android:orientation="vertical">
 
             <ImageView
@@ -173,12 +177,12 @@
                 android:layout_marginTop="2dp"
                 android:src="@drawable/tasbeeh"
                 android:translationZ="10dp"
-                app:layout_constraintLeft_toLeftOf="@id/tasbeeh"
-                app:layout_constraintRight_toRightOf="@id/tasbeeh"
-                app:layout_constraintTop_toTopOf="@id/tasbeeh" />
+                app:layout_constraintLeft_toLeftOf="@id/tasbeeh_btn"
+                app:layout_constraintRight_toRightOf="@id/tasbeeh_btn"
+                app:layout_constraintTop_toTopOf="@id/tasbeeh_btn" />
 
             <Button
-                android:id="@+id/tasbeeh"
+                android:id="@+id/tasbeeh_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/green_light"
