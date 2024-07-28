@@ -11,15 +11,30 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main_activity);
+        setContentView(R.layout.activity_main);
     }
 
     public void sabahClicked(View view) {
-        Intent intent = new Intent(MainActivity.this,SabahActivity.class);
+        Intent intent = new Intent(MainActivity.this, AzkarActivity.class);
+        intent.putExtra("type", "sabah");
         startActivity(intent);
     }
-    public void masaaClicked(View view){
-        Intent intent = new Intent(MainActivity.this, MasaaActivity.class);
+
+    public void masaaClicked(View view) {
+        Intent intent = new Intent(MainActivity.this, AzkarActivity.class);
+        intent.putExtra("type", "masaa");
+        startActivity(intent);
+    }
+
+    public void prayClicked(View view) {
+        Intent intent = new Intent(MainActivity.this, AzkarActivity.class);
+        intent.putExtra("type", "pray");
+        startActivity(intent);
+    }
+
+    public void tasbeehClicked(View view) {
+        Intent intent = new Intent(MainActivity.this, TasbeehActivity.class);
+        intent.putExtra("type", "tasbeeh");
         startActivity(intent);
     }
 }

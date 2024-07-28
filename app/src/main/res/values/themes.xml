@@ -1,10 +1,9 @@
 <resources>
     <!-- Base application theme. -->
         <style name="Theme.Azkar" parent="Theme.MaterialComponents.Light.NoActionBar">
-<!--    <style name="Theme.Azkar" parent="Theme.Design.Light.NoActionBar">-->
         <!-- Primary brand color. -->
-        <item name="colorPrimary">#CC4F7C79</item>
-        <item name="colorPrimaryVariant">@color/green_li</item>
+        <item name="colorPrimary">@color/green_dark</item>
+        <item name="colorPrimaryVariant">@color/green_light</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>

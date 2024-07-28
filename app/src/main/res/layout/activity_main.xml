@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/green_dr">
+    android:background="@color/green_dark">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineH"
@@ -12,7 +12,7 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.5" />
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guidelineV"
+        android:id="@+id/guidelineVR"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -72,7 +72,7 @@
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_marginTop="8dp"
-                android:src="@drawable/sun1"
+                android:src="@drawable/sun"
                 android:translationZ="10dp"
                 app:layout_constraintLeft_toLeftOf="@id/sabah"
                 app:layout_constraintRight_toRightOf="@id/sabah"
@@ -82,7 +82,7 @@
                 android:id="@+id/sabah"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/green_li"
+                android:backgroundTint="@color/green_light"
                 android:minWidth="150dp"
                 android:onClick="sabahClicked"
                 android:paddingTop="60dp"
@@ -115,7 +115,7 @@
                 android:id="@+id/masaa"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/green_li"
+                android:backgroundTint="@color/green_light"
                 android:minWidth="150dp"
                 android:onClick="masaaClicked"
                 android:paddingTop="66dp"
@@ -148,7 +148,7 @@
                 android:id="@+id/salaah"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/green_li"
+                android:backgroundTint="@color/green_light"
                 android:minWidth="150dp"
                 android:onClick="prayClicked"
                 android:paddingTop="60dp"
@@ -181,8 +181,9 @@
                 android:id="@+id/tasbeeh"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/green_li"
+                android:backgroundTint="@color/green_light"
                 android:minWidth="150dp"
+                android:onClick="tasbeehClicked"
                 android:paddingTop="60dp"
                 android:text="@string/tasbeeh"
                 android:textSize="20sp"
