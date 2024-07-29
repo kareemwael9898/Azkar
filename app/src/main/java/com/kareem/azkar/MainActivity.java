@@ -14,13 +14,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void eveningClicked(View view){
+    // Handle click events for the main page buttons
+    public void eveningClicked(View view) {
+        // Create an intent to start AzkarActivity
         Intent intent = new Intent(MainActivity.this, AzkarActivity.class);
+        // Add an extra to the intent to specify the type of Azkar
         intent.putExtra("type", "evening");
         startActivity(intent);
     }
 
-    public void morningClicked(View view){
+    public void morningClicked(View view) {
         Intent intent = new Intent(MainActivity.this, AzkarActivity.class);
         intent.putExtra("type", "morning");
         startActivity(intent);

@@ -6,14 +6,16 @@ import java.util.Arrays;
 import java.util.List;
 
 public class ZekrDM {
-    private int text;
-    private int count;
+    private int text;   // Resource ID for the text
+    private int count;  // Number of times to display the Zekr
 
+    // Constructor to initialize text and count
     public ZekrDM(int text, int count) {
         this.text = text;
         this.count = count;
     }
 
+    // Initialize Getters & Setters
     public int getTextId() {
         return text;
     }
@@ -26,6 +28,7 @@ public class ZekrDM {
         this.count = count;
     }
 
+    // Method to get a list of ZekrDM objects (Azkar) based on the type
     static public List<ZekrDM> getData(String type) {
         switch (type) {
             case "evening":
@@ -94,7 +97,9 @@ public class ZekrDM {
                         new ZekrDM(R.string.doaaaSalah12,1),
                         new ZekrDM(R.string.doaaaSalah13,7));
             default:
+                // Log an error message if the type does not match any case
                 Log.e("getData", "Type does not match" );
+                // Return an empty list if no match is found
                 return java.util.Collections.emptyList();
         }
     }
