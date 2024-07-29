@@ -33,6 +33,7 @@
             android:gravity="center"
             android:singleLine="true"
             android:text="!!!0"
+            android:textDirection="ltr"
             android:textSize="@dimen/_40ssp"
             app:layout_constraintBottom_toBottomOf="@+id/sebha_iv"
             app:layout_constraintHeight_percent="0.14"
