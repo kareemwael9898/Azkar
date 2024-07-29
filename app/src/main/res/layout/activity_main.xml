@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/green_dark">
 
     <View
-        android:id="@+id/s2nd_layer_background"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="81dp"
@@ -37,7 +37,8 @@
         app:layout_constraintBottom_toTopOf="@id/s3rd_layer_background"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
 
     <GridLayout
         android:layout_width="match_parent"
@@ -69,7 +70,8 @@
                 app:layout_constraintBottom_toBottomOf="@id/morning_layout"
                 app:layout_constraintLeft_toLeftOf="@id/morning_layout"
                 app:layout_constraintRight_toRightOf="@id/morning_layout"
-                app:layout_constraintTop_toTopOf="@id/morning_layout" />
+                app:layout_constraintTop_toTopOf="@id/morning_layout"
+                tools:ignore="UsingOnClickInXml" />
 
             <ImageView
                 android:layout_width="60dp"
@@ -81,7 +83,8 @@
                 android:translationZ="10dp"
                 app:layout_constraintLeft_toLeftOf="@id/morning_btn"
                 app:layout_constraintRight_toRightOf="@id/morning_btn"
-                app:layout_constraintTop_toTopOf="@id/morning_btn" />
+                app:layout_constraintTop_toTopOf="@id/morning_btn"
+                tools:ignore="ContentDescription" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout

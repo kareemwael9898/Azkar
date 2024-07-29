@@ -42,30 +42,27 @@ public class AzkarAdapter extends RecyclerView.Adapter<AzkarAdapter.azkarVH> {
     public void onBindViewHolder(@NonNull azkarVH holder, int position) {
         int textId = azkar.get(position).getTextId();
         holder.textView.setText(this.context.getResources().getString(textId));
-        holder.textView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar snackbar = initCustomSnackbar(view);
-                int currentCount = azkar.get(position).getCount();
-                Log.e("onClick", "count= " + currentCount);
-                if (currentCount > 1) {
-                    azkar.get(position).setCount(currentCount - 1);
-                    snackbar.setText("يتبقي " + (currentCount - 1));
-                } else {
-                    mediaPlayer.start();
-                    view.setClickable(false);
-                    azkar.remove(position);
-                    new Handler().postDelayed(() -> {
-                        Log.e("Wait", "remove: " + position);
-                        notifyDataSetChanged();
-                    }, 50);
-                    snackbar.setText(" إنتهيت ");
-                }
-                snackbar.show();
-                if (azkar.isEmpty()) {
-                    mediaPlayer.release();
-                    ((Activity) context).finish();
-                }
+        holder.textView.setOnClickListener(view -> {
+            Snackbar snackbar = initCustomSnackbar(view);
+            int currentCount = azkar.get(position).getCount();
+            Log.e("onClick", "count= " + currentCount);
+            if (currentCount > 1) {
+                azkar.get(position).setCount(currentCount - 1);
+                snackbar.setText("يتبقي " + (currentCount - 1));
+            } else {
+                mediaPlayer.start();
+                view.setClickable(false);
+                azkar.remove(position);
+                new Handler().postDelayed(() -> {
+                    Log.e("Wait", "remove: " + position);
+                    notifyDataSetChanged();
+                }, 50);
+                snackbar.setText(" إنتهيت ");
+            }
+            snackbar.show();
+            if (azkar.isEmpty()) {
+                mediaPlayer.release();
+                ((Activity) context).finish();
             }
         });
     }
